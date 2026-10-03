@@ -2,12 +2,15 @@
 
 Full-stack web app where students manage their own academic/personal tasks. It is a **vibe-coding practice project**: the goal is learning to build with AI step by step, not just getting a finished app.
 
-Source of truth: [docs/Student_Task_Management_System_SRS_Vibe_Coding.md](docs/Student_Task_Management_System_SRS_Vibe_Coding.md). If this file and the SRS disagree, the SRS wins.
+Source of truth: [Student_Task_Management_System_SRS_Vibe_Coding.md](Student_Task_Management_System_SRS_Vibe_Coding.md). If this file and the SRS disagree, the SRS wins.
+
+Module-wise implementation plan: [plan/00-implementation-plan.md](plan/00-implementation-plan.md), with one document per module (01–09) in [plan/](plan/). Before working on a module, read its document. Production-level test cases (with IDs and priorities) for every module are in [test-cases/](test-cases/00-test-strategy.md). A module is done only when its P0 and P1 cases pass.
 
 ## Current status
 
-- Only the SRS exists. No code has been written yet.
-- **Tech stack not chosen yet.** SRS options: React (JS/TS) + CSS/Tailwind/MUI frontend; Node+Express / Spring Boot / Go+Gin backend; PostgreSQL / MySQL; JWT or secure sessions. Ask the user before assuming one, then record the choice here.
+- Modules 1–7 are implemented (backend API + frontend). Module 8 backend tests are written and need a local `task_manager_test` DB to run. Module 9 README and `docs/API.md` are drafted.
+- Still to do: run migrations and `npm test` against real databases, the manual end-to-end pass, the review in `docs/review-findings.md` (module 8 Part C/D), screenshots, and per-module commits.
+- **Tech stack (decided):** React 19 + Vite + React Router + Tailwind (JavaScript) | Node.js + Express 5 (JavaScript, ES modules) | PostgreSQL with `pg` and plain SQL | `zod` validation | JWT (`jsonwebtoken`) + `bcryptjs` | Vitest + Supertest.
 
 ## How to work in this repo (vibe-coding rules from the SRS)
 
